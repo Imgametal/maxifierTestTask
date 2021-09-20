@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="CacheApi" class="ru.gateway.application.impl.ApiImpl"/>
+    <bean id="CacheMaintainer" class="ru.gateway.application.impl.CacheMaintainerImpl"/>
+    <bean id="RequirementAnalyzer" class="ru.gateway.application.impl.RequirementAnalyzerImpl"/>
+    <bean id="SequenceStateStorage" class="ru.gateway.adapters.impl.SequenceStateStorageImpl"/>
+    <bean id="ConfigProvider" class="ru.gateway.adapters.impl.ConfigProviderImpl"/>
+    <bean id="IdsProvider" class="ru.gateway.adapters.impl.IdsProviderImpl"/>
+    <bean id="restTemplate" name="RestTemplate"  class="org.springframework.web.client.RestTemplate" factory-bean="restTemplateBuilder" factory-method="build"/>
+
+
+
+</beans>
